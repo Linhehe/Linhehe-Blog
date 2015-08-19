@@ -45,16 +45,6 @@ section, footer, nav{
 	The Gallery
 -----------------------------*/
 
-
-h1{
-	font: 36px 'Cookie', cursive;
-	color: white;
-	width: 210px;
-	margin: 20px auto 50px;
-	white-space: nowrap;
-	text-align: center;
-}
-
 #gallery{
 	width: 500px;
 	height: 340px;

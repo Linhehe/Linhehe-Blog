@@ -1,7 +1,27 @@
 /**
  * Created by linhehe on 15/8/16.
  */
-var app = angular.module('LinheheBlog', ['ui.bootstrap']);
+var app = angular.module('LinheheBlog', ['ui.router','ui.bootstrap']);
+
+app.config([
+    '$stateProvider',
+    '$urlRouterProvider',
+    function($stateProvider, $urlRouterProvider) {
+
+        $stateProvider
+            .state('home', {
+                url: '/home',
+                templateUrl: '/home.html',
+                controller: 'HomeCtrl'
+            })
+            .state('picture', {
+                url: '/picture',
+                templateUrl: '/picture.html',
+                controller: 'PictureCtrl'
+            });
+
+        $urlRouterProvider.otherwise('home');
+    }]);
 
 app.controller('HomeCtrl', function($scope){
     //
